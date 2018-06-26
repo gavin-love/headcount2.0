@@ -22,14 +22,14 @@ describe("DistrictRepository iteration 1 - part 1", () => {
     expect(district.findByName("ACADEmY 20").Location).toEqual("ACADEMY 20");
   });
 
-  test.only("each district has a data object containing each year and its data as key value pairs.", () => {
+  test("each district has a data object containing each year and its data as key value pairs.", () => {
     const academy = district.findByName("ACADEmY 20");
 
     expect(academy.Location).toEqual("ACADEMY 20");
     expect(typeof academy.stats).toBe("object");
   });
 
-  test("district data is rounded to the nearest hundredth", () => {
+  test.only("district data is rounded to the nearest hundredth", () => {
     const result = {
       "2004": 0.302,
       "2005": 0.267,

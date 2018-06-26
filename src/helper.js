@@ -8,12 +8,26 @@ export default class DistrictRepository {
   noDuplicates = props => {
     return props.reduce((allDistricts, school) => {
       const upperCaseDistrict = school.Location.toUpperCase();
+      const year = school.TimeFrame;
+      const percentage = school.Data;
+      let roundedPercentage = 0;
+
+      if (typeof percentage === "number") {
+        roundedPercentage = Math.round(percentage * 1000) / 1000;
+      }
+
       if (!allDistricts[upperCaseDistrict]) {
         allDistricts[upperCaseDistrict] = {
           Location: upperCaseDistrict,
-          stats: {}
+          stats: { [year]: roundedPercentage }
+        };
+      } else {
+        allDistricts[upperCaseDistrict].stats = {
+          ...allDistricts[upperCaseDistrict].stats,
+          [year]: roundedPercentage
         };
       }
+
       return allDistricts;
     }, []);
   };
