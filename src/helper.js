@@ -17,6 +17,14 @@ export default class DistrictRepository {
     }, {});
   };
 
+  findByName = location => {
+    if (location) {
+      const upperCaseLocation = location.toUpperCase();
+      return this.stats[upperCaseLocation];
+    }
+    return undefined;
+  };
+
   render() {
     return <h1>hello</h1>;
   }
