@@ -12,7 +12,7 @@ describe("DistrictRepository iteration 1 - part 1", () => {
     expect(district.findByName("Vikings")).toBe(undefined);
   });
 
-  test.only("findByName returns an object with its individual district information", () => {
+  test("findByName returns an object with its individual district information", () => {
     expect(typeof district.findByName("Colorado")).toEqual("object");
     expect(district.findByName("Colorado").Location).toEqual("COLORADO");
   });
@@ -22,10 +22,10 @@ describe("DistrictRepository iteration 1 - part 1", () => {
     expect(district.findByName("ACADEmY 20").Location).toEqual("ACADEMY 20");
   });
 
-  test("each district has a data object containing each year and its data as key value pairs.", () => {
+  test.only("each district has a data object containing each year and its data as key value pairs.", () => {
     const academy = district.findByName("ACADEmY 20");
 
-    expect(academy.location).toEqual("ACADEMY 20");
+    expect(academy.Location).toEqual("ACADEMY 20");
     expect(typeof academy.stats).toBe("object");
   });
 

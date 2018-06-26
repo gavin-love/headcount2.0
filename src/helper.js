@@ -10,14 +10,16 @@ export default class DistrictRepository {
       const upperCaseDistrict = school.Location.toUpperCase();
       if (!allDistricts[upperCaseDistrict]) {
         allDistricts[upperCaseDistrict] = {
-          Location: upperCaseDistrict
+          Location: upperCaseDistrict,
+          stats: {}
         };
       }
       return allDistricts;
-    }, {});
+    }, []);
   };
 
   findByName = location => {
+    // console.log(this.stats);
     if (location) {
       const upperCaseLocation = location.toUpperCase();
       return this.stats[upperCaseLocation];
