@@ -33,13 +33,16 @@ export default class DistrictRepository {
   };
 
   findByName = location => {
-    // console.log(this.stats);
     if (location) {
       const upperCaseLocation = location.toUpperCase();
       return this.stats[upperCaseLocation];
     }
     return undefined;
-  };
+  }
+
+  findAllMatches = location => {
+    return Object.keys(this.stats)
+  }
 
   render() {
     return <h1>hello</h1>;
