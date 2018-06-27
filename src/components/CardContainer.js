@@ -12,8 +12,4 @@ const CardContainer = ({districts}) => {
   )
 }
 
-
-  // {allDistricts}
-
-
 export default CardContainer;
