@@ -1,9 +1,15 @@
 import React from 'react';
+import '../styles/Card.css'
 
 const Card = (props) => {
   const districtValues = Object.values(props.stats);
   const districtStat = districtValues.map((stat, index) => {
-    return <li key={index} >{stat}</li>
+    if (stat >= .5) {
+      return <li className="greater" key={index} >{stat}</li>
+    } else {
+      return <li className="lessThan" key={index} >{stat}</li>
+      
+    }
   })
 
   return (
