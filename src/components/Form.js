@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Form extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
     this.state = {
-      district: ''
-    }
+      district: ""
+    };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
       district: event.target.value
-    })
-  }
+    });
+  };
 
-  submitDistrict = (event) => {
+  submitDistrict = event => {
     event.preventDefault();
-    
-  }
+    // console.log("submit works");
 
-  render () {
+    this.props.filterSelectedDistricts(this.state.district);
+  };
+
+  render() {
     return (
       <form onSubmit={this.submitDistrict}>
-        <input 
+        <input
           type="text"
           placeholder="Enter District"
           value={this.state.district}
@@ -30,7 +32,6 @@ export default class Form extends Component {
         />
         <button>Submit</button>
       </form>
-    )
+    );
   }
 }
-
