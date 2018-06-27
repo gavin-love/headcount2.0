@@ -26,9 +26,8 @@ class App extends Component {
   })    
 }
 
-
-componentDidMount() {
-  this.displayDistricts()
+  componentDidMount() {
+    this.displayDistricts()
   }
 
   render() {
