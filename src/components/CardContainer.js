@@ -1,14 +1,17 @@
 import React from 'react';
 import Card from './Card';
 
-const CardContainer = (props) => {
-  // console.log(props)
-  // const allDistricts = props.map(district => {
-  //   return <Card location={district.Location} stats={district.stats}/>
+const CardContainer = ({districts}) => {
+  const allDistricts = districts.map((district, index) => {
+    return <Card location={district.Location} stats={district.stats} key={index} />
+  })
   return (
-    <h1>hi</h1>
+    <div>
+    {allDistricts}
+    </div>
   )
-  }
+}
+
 
   // {allDistricts}
 
