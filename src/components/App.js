@@ -4,6 +4,7 @@ import Form from "../components/Form";
 import CardContainer from "../components/CardContainer";
 import DistrictRepository from "../helper";
 import kinderData from "../../src/data/kindergartners_in_full_day_program";
+import CompareCardsContainer from "./CompareCardsContainer";
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +48,9 @@ class App extends Component {
     return (
       <div>
         <Form filterSelectedDistricts={this.filterSelectedDistricts} />
-
+        <CompareCardsContainer
+          selectedDistricts={this.state.selectedDistricts}
+        />
         <CardContainer districts={this.state.districts} />
       </div>
     );
