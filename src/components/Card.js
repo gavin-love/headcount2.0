@@ -2,8 +2,8 @@ import React from 'react';
 
 const Card = (props) => {
   const districtValues = Object.values(props.stats);
-  const districtStat = districtValues.map(stat => {
-    return <li>{stat}</li>
+  const districtStat = districtValues.map((stat, index) => {
+    return <li key={index} >{stat}</li>
   })
 
   return (
