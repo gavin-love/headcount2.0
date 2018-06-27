@@ -48,7 +48,7 @@ export default class DistrictRepository {
         if(this.stats[district].Location.includes(upperCaseLocation)) {
           matches = [...matches, this.stats[district]]
         }
-        console.log(matches)
+        
         return matches;
       }, [])
       } else {
