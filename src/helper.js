@@ -42,14 +42,13 @@ export default class DistrictRepository {
 
   findAllMatches = location => {
     const locationKeys = Object.keys(this.stats);
-
     if (location) {
       const upperCaseLocation = location.toUpperCase();
       return locationKeys.reduce((matches, district) => {
         if(this.stats[district].Location.includes(upperCaseLocation)) {
           matches = [...matches, this.stats[district]]
         }
-
+        console.log(matches)
         return matches;
       }, [])
       } else {

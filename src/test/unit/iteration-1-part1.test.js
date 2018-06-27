@@ -29,7 +29,7 @@ describe("DistrictRepository iteration 1 - part 1", () => {
     expect(typeof academy.stats).toBe("object");
   });
 
-  test.only("district data is rounded to the nearest hundredth", () => {
+  test("district data is rounded to the nearest hundredth", () => {
     const result = {
       "2004": 0.302,
       "2005": 0.267,
