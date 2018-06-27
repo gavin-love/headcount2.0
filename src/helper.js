@@ -29,17 +29,38 @@ export default class DistrictRepository {
       }
 
       return allDistricts;
-    }, []);
+    }, {});
   };
 
   findByName = location => {
-    // console.log(this.stats);
     if (location) {
       const upperCaseLocation = location.toUpperCase();
       return this.stats[upperCaseLocation];
     }
     return undefined;
-  };
+  }
+
+  findAllMatches = location => {
+    const locationKeys = Object.keys(this.stats);
+    if (location) {
+      const upperCaseLocation = location.toUpperCase();
+      return locationKeys.reduce((matches, district) => {
+        if(this.stats[district].Location.includes(upperCaseLocation)) {
+          matches = [...matches, this.stats[district]]
+        }
+        console.log(matches)
+        return matches;
+      }, [])
+      } else {
+        const defaultStats = [];
+        locationKeys.forEach(location => {
+          defaultStats.push(this.stats[location])
+        })
+
+        return defaultStats;
+    }
+  }
+  
 
   render() {
     return <h1>hello</h1>;
