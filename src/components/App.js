@@ -52,6 +52,21 @@ class App extends Component {
     })
   }
 
+  findAverages = (location) => {
+    const locationStats = Object.values(location.stats);
+    let xyz;
+    xyz =  locationStats.reduce((average, num) => {
+      let sum = average += num
+      average = sum
+      return average
+    }, 0)
+
+    const newSelectedDistrict = {...location, average: xyz / locationStats.length};
+    const selectedDistricts = [...this.state.selectedDistricts, newSelectedDistrict]
+
+    this.setState({ selectedDistricts })
+  }
+
   componentDidMount() {
     this.addDistricts();
   }
@@ -65,7 +80,7 @@ class App extends Component {
             selectedDistricts={this.state.selectedDistricts}
           />
           <CardContainer 
-          districts={this.state.searchedDistricts} />
+          districts={this.state.searchedDistricts} findAverages={this.findAverages} />
         </div>
       );
     }
@@ -77,7 +92,7 @@ class App extends Component {
           selectedDistricts={this.state.selectedDistricts}
         />
         <CardContainer 
-        districts={this.state.districts} />
+        districts={this.state.districts} findAverages={this.findAverages} />
       </div>
     );
   }
