@@ -11,14 +11,14 @@ class App extends Component {
     super(props);
     this.state = {
       districts: [],
-      selectedDistricts: []
+      selectedDistricts: [],
+      searchedDistricts: []
     };
   }
 
   addDistricts = () => {
     const district = new DistrictRepository(kinderData);
     const districtKeys = Object.keys(district.stats);
-
     const eachDistrict = districtKeys.map(key => {
       return district.stats[key];
     });
@@ -32,7 +32,7 @@ class App extends Component {
     const allSelectedDistricts = this.state.districts.filter(district => {
       const upperCaseLocation = location.toUpperCase();
 
-      return district.Location.includes(upperCaseLocation);
+      return district.Location == upperCaseLocation
     });
 
     this.setState({
@@ -40,18 +40,44 @@ class App extends Component {
     });
   };
 
+  displaySearchedDistricts = (location) => {
+    const searchedDistricts = this.state.districts.filter(district => {
+    const upperCaseLocation = location.toUpperCase();
+
+      return district.Location.includes(upperCaseLocation)
+    });
+
+    this.setState({
+      searchedDistricts: searchedDistricts
+    })
+  }
+
   componentDidMount() {
     this.addDistricts();
   }
 
   render() {
+    if (this.state.searchedDistricts.length) {
+      return (
+        <div>
+          <Form filterSelectedDistricts={this.filterSelectedDistricts} displaySearchedDistricts={this.displaySearchedDistricts} />
+          <CompareCardsContainer
+            selectedDistricts={this.state.selectedDistricts}
+          />
+          <CardContainer 
+          districts={this.state.searchedDistricts} />
+        </div>
+      );
+    }
+
     return (
       <div>
-        <Form filterSelectedDistricts={this.filterSelectedDistricts} />
+        <Form filterSelectedDistricts={this.filterSelectedDistricts} displaySearchedDistricts={this.displaySearchedDistricts} />
         <CompareCardsContainer
           selectedDistricts={this.state.selectedDistricts}
         />
-        <CardContainer districts={this.state.districts} />
+        <CardContainer 
+        districts={this.state.districts} />
       </div>
     );
   }

@@ -12,7 +12,14 @@ export default class Form extends Component {
     this.setState({
       district: event.target.value
     });
+    this.props.displaySearchedDistricts(this.state.district)
   };
+
+  onKeyDown = (event) => {
+    if (event.keyCode === 8) {
+     this.handleChange(event)
+    }
+  }
 
   submitDistrict = event => {
     event.preventDefault();
@@ -23,14 +30,14 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitDistrict}>
+      <form>
         <input
           type="text"
           placeholder="Enter District"
           value={this.state.district}
           onChange={this.handleChange}
+          onKeyDown={this.onKeyDown}
         />
-        <button>Submit</button>
       </form>
     );
   }
