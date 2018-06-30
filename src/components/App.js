@@ -28,18 +28,6 @@ class App extends Component {
     });
   };
 
-  filterSelectedDistricts = location => {
-    const allSelectedDistricts = this.state.districts.filter(district => {
-      const upperCaseLocation = location.toUpperCase();
-
-      return district.Location === upperCaseLocation;
-    });
-
-    this.setState({
-      selectedDistricts: allSelectedDistricts
-    });
-  };
-
   displaySearchedDistricts = location => {
     const searchedDistricts = this.state.districts.filter(district => {
       const upperCaseLocation = location.toUpperCase();
