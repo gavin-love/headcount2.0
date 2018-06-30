@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Card.css";
+import PropTypes from 'prop-types';
 
 const Card = props => {
   if (props.stats) {
@@ -38,6 +39,16 @@ const Card = props => {
       </div>
     );
   }
+};
+
+Card.propTypes = {
+  stats: PropTypes.object,
+  location: PropTypes.string,
+  locationOne: PropTypes.string,
+  locationOneAverage: PropTypes.number,
+  locationTwoAverage: PropTypes.number,
+  comparedAverage: PropTypes.number,
+  locationTwo: PropTypes.string,
 };
 
 export default Card;
