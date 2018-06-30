@@ -20,7 +20,8 @@ export default class DistrictRepository {
         allDistricts[upperCaseDistrict] = {
           Location: upperCaseDistrict,
           stats: { [year]: roundedPercentage }
-        };
+        }
+
       } else {
         allDistricts[upperCaseDistrict].stats = {
           ...allDistricts[upperCaseDistrict].stats,
@@ -59,6 +60,10 @@ export default class DistrictRepository {
 
         return defaultStats;
     }
+  }
+
+  findAverage = (location) => {
+    
   }
   
 

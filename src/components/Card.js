@@ -13,7 +13,7 @@ const Card = (props) => {
   })
 
   return (
-    <div>
+    <div onClick={() => props.findAverages(props)} >
       <h1>{props.location}</h1>
       <ul>{districtStat}</ul>
     </div>
