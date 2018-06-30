@@ -11,8 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       districts: [],
-      selectedDistricts: [],
-      searchedDistricts: []
+      searchedDistricts: [],
+      selectedDistricts: []
     };
   }
 
@@ -32,7 +32,7 @@ class App extends Component {
     const allSelectedDistricts = this.state.districts.filter(district => {
       const upperCaseLocation = location.toUpperCase();
 
-      return district.Location == upperCaseLocation
+      return district.Location === upperCaseLocation;
     });
 
     this.setState({
@@ -40,32 +40,61 @@ class App extends Component {
     });
   };
 
-  displaySearchedDistricts = (location) => {
+  displaySearchedDistricts = location => {
     const searchedDistricts = this.state.districts.filter(district => {
-    const upperCaseLocation = location.toUpperCase();
+      const upperCaseLocation = location.toUpperCase();
 
-      return district.Location.includes(upperCaseLocation)
+      return district.Location.includes(upperCaseLocation);
     });
 
     this.setState({
       searchedDistricts: searchedDistricts
-    })
-  }
+    });
+  };
 
-  findAverages = (location) => {
+  findAverages = location => {
     const locationStats = Object.values(location.stats);
     let xyz;
-    xyz =  locationStats.reduce((average, num) => {
-      let sum = average += num
-      average = sum
-      return average
-    }, 0)
+    xyz = locationStats.reduce((average, num) => {
+      average += num;
+      return average;
+    }, 0);
 
-    const newSelectedDistrict = {...location, average: xyz / locationStats.length};
-    const selectedDistricts = [...this.state.selectedDistricts, newSelectedDistrict]
+    const newSelectedDistrict = {
+      ...location,
+      average: xyz / locationStats.length
+    };
+    const selectedDistricts = [
+      ...this.state.selectedDistricts,
+      newSelectedDistrict
+    ];
 
-    this.setState({ selectedDistricts })
-  }
+    this.setState({ selectedDistricts }, () => {
+      this.compareAverages(this.state.selectedDistricts);
+    });
+  };
+
+  compareAverages = districts => {
+    if (this.state.selectedDistricts.length === 2) {
+      const sum = districts[0].average + districts[1].average;
+      const average = sum / 2;
+
+      const compareCardData = {
+        locationOne: districts[0].location,
+        locationOneAverage: districts[0].average,
+        comparedAverage: average,
+        locationTwo: districts[1].location,
+        locationTwoAverage: districts[1].average
+      };
+
+      const selectedDistricts = [
+        ...this.state.selectedDistricts,
+        compareCardData
+      ];
+
+      this.setState({ selectedDistricts });
+    }
+  };
 
   componentDidMount() {
     this.addDistricts();
@@ -75,24 +104,34 @@ class App extends Component {
     if (this.state.searchedDistricts.length) {
       return (
         <div>
-          <Form filterSelectedDistricts={this.filterSelectedDistricts} displaySearchedDistricts={this.displaySearchedDistricts} />
+          <Form
+            filterSelectedDistricts={this.filterSelectedDistricts}
+            displaySearchedDistricts={this.displaySearchedDistricts}
+          />
           <CompareCardsContainer
             selectedDistricts={this.state.selectedDistricts}
           />
-          <CardContainer 
-          districts={this.state.searchedDistricts} findAverages={this.findAverages} />
+          <CardContainer
+            districts={this.state.searchedDistricts}
+            findAverages={this.findAverages}
+          />
         </div>
       );
     }
 
     return (
       <div>
-        <Form filterSelectedDistricts={this.filterSelectedDistricts} displaySearchedDistricts={this.displaySearchedDistricts} />
+        <Form
+          filterSelectedDistricts={this.filterSelectedDistricts}
+          displaySearchedDistricts={this.displaySearchedDistricts}
+        />
         <CompareCardsContainer
           selectedDistricts={this.state.selectedDistricts}
         />
-        <CardContainer 
-        districts={this.state.districts} findAverages={this.findAverages} />
+        <CardContainer
+          districts={this.state.districts}
+          findAverages={this.findAverages}
+        />
       </div>
     );
   }

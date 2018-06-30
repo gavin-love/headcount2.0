@@ -12,14 +12,14 @@ export default class Form extends Component {
     this.setState({
       district: event.target.value
     });
-    this.props.displaySearchedDistricts(this.state.district)
+    this.props.displaySearchedDistricts(event.target.value);
   };
 
-  onKeyDown = (event) => {
+  onKeyDown = event => {
     if (event.keyCode === 8) {
-     this.handleChange(event)
+      this.handleChange(event);
     }
-  }
+  };
 
   submitDistrict = event => {
     event.preventDefault();
