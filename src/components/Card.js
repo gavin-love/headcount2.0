@@ -3,6 +3,7 @@ import "../styles/Card.css";
 import PropTypes from "prop-types";
 
 const Card = props => {
+
   if (props.stats) {
     const districtValues = Object.values(props.stats);
     const districtStat = districtValues.map((stat, index) => {
@@ -28,7 +29,7 @@ const Card = props => {
       </div>
     );
   } else if (!props.stats) {
-    console.log(props);
+
     return (
       <div
         onClick={() => props.findAverages(props)}
