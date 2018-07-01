@@ -41,7 +41,6 @@ class App extends Component {
   };
 
   findAverages = location => {
-    
     if(this.state.selectedDistricts.length < 2) {
       const locationStats = Object.values(location.stats);
       let xyz;
@@ -55,7 +54,7 @@ class App extends Component {
 
       const newSelectedDistrict = {
         ...location,
-        average: average
+        average
       };
       const selectedDistricts = [
         ...this.state.selectedDistricts,
