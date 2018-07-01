@@ -7,6 +7,7 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
   if (selectedDistricts) {
     const allSelectedDistricts = selectedDistricts.map(
       (selectedDistrict, index) => {
+        
         if (selectedDistrict.locationOne) {
           return (
             <Card

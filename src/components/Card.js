@@ -3,6 +3,7 @@ import "../styles/Card.css";
 import PropTypes from 'prop-types';
 
 const Card = props => {
+
   if (props.stats) {
     const districtValues = Object.values(props.stats);
     const districtYears = Object.keys(props.stats)
