@@ -47,7 +47,7 @@ const Card = props => {
         className="compare-card card">
         <h1>{props.locationOne}</h1>
         <h1>{props.locationOneAverage}</h1>
-        <p>{props.comparedAverage}</p>
+        <h1 className="comp-average">{props.comparedAverage}</h1>
         <h1>{props.locationTwo}</h1>
         <h1>{props.locationTwoAverage}</h1>
       </div>
