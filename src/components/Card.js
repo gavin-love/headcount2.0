@@ -12,6 +12,7 @@ const Card = props => {
             {stat}
           </li>
         );
+
       } else {
         return (
           <li className="lessThan" key={index}>
@@ -22,7 +23,7 @@ const Card = props => {
     });
 
     return (
-      <div onClick={() => props.findAverages(props)} className="su">
+      <div onClick={() => props.findAverages(props)} className="card">
         <h1>{props.location}</h1>
         <ul>{districtStat}</ul>
       </div>
@@ -30,7 +31,7 @@ const Card = props => {
   } else if (!props.stats) {
     console.log(props);
     return (
-      <div className="compare-card">
+      <div className="compare-card card">
         <h1>{props.locationOne}</h1>
         <h1>{props.locationOneAverage}</h1>
         <p>{props.comparedAverage}</p>

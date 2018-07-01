@@ -1,0 +1,13 @@
+input {
+  font-size: 1.6rem;
+  width: 300px;
+  margin: 10px;
+  padding: 4px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+}

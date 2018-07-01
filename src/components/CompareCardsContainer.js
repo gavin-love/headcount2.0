@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import PropTypes from 'prop-types';
+import '../styles/CompareCardContainer.css'
 
 const CompareCardsContainer = ({ selectedDistricts }) => {
   if (selectedDistricts) {
@@ -30,7 +31,7 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
       }
     );
 
-    return <div>{allSelectedDistricts}</div>;
+    return <div className="compare-cards-container">{allSelectedDistricts}</div>;
   } else {
     return <div />;
   }
