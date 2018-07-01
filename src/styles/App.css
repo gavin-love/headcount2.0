@@ -1,1 +1,9 @@
 /*APP COMPONENT RELATED CSS GOES HERE*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #BACACB;
+}
