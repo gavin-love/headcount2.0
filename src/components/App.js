@@ -41,6 +41,7 @@ class App extends Component {
   };
 
   findAverages = location => {
+    
     if(this.state.selectedDistricts.length < 2) {
       const locationStats = Object.values(location.stats);
       let xyz;
@@ -49,9 +50,12 @@ class App extends Component {
         return average;
       }, 0);
   
+      const result = xyz / locationStats.length
+      const average = Math.round(result * 1000) / 1000
+
       const newSelectedDistrict = {
         ...location,
-        average: xyz / locationStats.length
+        average: average
       };
       const selectedDistricts = [
         ...this.state.selectedDistricts,
@@ -88,15 +92,23 @@ class App extends Component {
 
   compareAverages = districts => {
     if (this.state.selectedDistricts.length === 2) {
-      const sum = districts[0].average + districts[1].average;
-      const average = sum / 2;
+
+      const roundNumber = (number) => {
+        return Math.round(number * 1000) / 1000
+      }
+
+      const result = (districts[0].average + districts[1].average) / 2;
+      const comparedAverage = roundNumber(result)
+
+      const locationOneAverage = roundNumber(districts[0].average);
+      const locationTwoAverage = roundNumber(districts[1].average);
 
       const compareCardData = {
         locationOne: districts[0].location,
-        locationOneAverage: districts[0].average,
-        comparedAverage: average,
+        locationOneAverage,
+        comparedAverage,
         locationTwo: districts[1].location,
-        locationTwoAverage: districts[1].average
+        locationTwoAverage
       };
 
       const selectedDistricts = [
