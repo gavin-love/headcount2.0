@@ -3,9 +3,10 @@ import Card from './Card';
 import PropTypes from 'prop-types';
 import  '../styles/CardContainer.css'
 
-const CardContainer = ({districts, findAverages}) => {
+const CardContainer = ({districts, findAverages, selectedDistricts}) => {
   const allDistricts = districts.map((district, index) => {
-    return <Card location={district.Location} stats={district.stats} key={index} findAverages={findAverages} />
+    // console.log(selectedDistricts)
+    return <Card location={district.Location} stats={district.stats} key={index} selected={selectedDistricts} findAverages={findAverages} />
   })
   return (
     <div className="card-container">

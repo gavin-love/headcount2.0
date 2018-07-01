@@ -6,8 +6,7 @@ import '../styles/CompareCardContainer.css'
 const CompareCardsContainer = ({ selectedDistricts }) => {
   if (selectedDistricts) {
     const allSelectedDistricts = selectedDistricts.map(
-      (selectedDistrict, index) => {
-        
+      (selectedDistrict, index) => {        
         if (selectedDistrict.locationOne) {
           return (
             <Card
@@ -17,7 +16,7 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
               locationTwo={selectedDistrict.locationTwo}
               locationTwoAverage={selectedDistrict.locationTwoAverage}
               key={index}
-              findAverages={selectedDistrict.findAverages}
+              findAverages={selectedDistrict.findAverages}          
             />
           );
         }
@@ -28,6 +27,8 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
             location={selectedDistrict.location}
             stats={selectedDistrict.stats}
             key={index}
+            selected={selectedDistrict.selected}
+            
           />
         );
       }
