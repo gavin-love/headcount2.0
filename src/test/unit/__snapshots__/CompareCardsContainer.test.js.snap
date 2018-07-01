@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompareCardContainer matches the snapshot 1`] = `undefined`;
+
+exports[`CompareCardContainer should 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CompareCardsContainer
+    selectedDistricts={
+        Array [
+            Object {
+              "average": 34,
+              "findAverages": Object {
+                "mockFunction": [Function],
+              },
+              "location": "colorado",
+              "stats": Object {
+                "2004": 0.24,
+                "2005": 0.63,
+                "2006": 0.11,
+              },
+            },
+            Object {
+              "average": 12,
+              "findAverages": Object {
+                "mockFunction": [Function],
+              },
+              "location": "academy 20",
+              "stats": Object {
+                "2012": 0.24,
+                "2013": 0.63,
+                "2014": 0.11,
+              },
+            },
+            Object {
+              "comparedAverage": 0.46,
+              "locationOne": "COLORADO",
+              "locationOneAverage": 0.53,
+              "locationTwo": "ACADEMY 20",
+              "locationTwoAverage": 0.4,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          findAverages={
+                    Object {
+                              "mockFunction": [Function],
+                            }
+          }
+          location="colorado"
+          stats={
+                    Object {
+                              "2004": 0.24,
+                              "2005": 0.63,
+                              "2006": 0.11,
+                            }
+          }
+/>,
+        <Card
+          findAverages={
+                    Object {
+                              "mockFunction": [Function],
+                            }
+          }
+          location="academy 20"
+          stats={
+                    Object {
+                              "2012": 0.24,
+                              "2013": 0.63,
+                              "2014": 0.11,
+                            }
+          }
+/>,
+        <Card
+          comparedAverage={0.46}
+          findAverages={undefined}
+          locationOne="COLORADO"
+          locationOneAverage={0.53}
+          locationTwo="ACADEMY 20"
+          locationTwoAverage={0.4}
+/>,
+      ],
+      "className": "compare-cards-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "findAverages": Object {
+            "mockFunction": [Function],
+          },
+          "location": "colorado",
+          "stats": Object {
+            "2004": 0.24,
+            "2005": 0.63,
+            "2006": 0.11,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "findAverages": Object {
+            "mockFunction": [Function],
+          },
+          "location": "academy 20",
+          "stats": Object {
+            "2012": 0.24,
+            "2013": 0.63,
+            "2014": 0.11,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "comparedAverage": 0.46,
+          "findAverages": undefined,
+          "locationOne": "COLORADO",
+          "locationOneAverage": 0.53,
+          "locationTwo": "ACADEMY 20",
+          "locationTwoAverage": 0.4,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            findAverages={
+                        Object {
+                                    "mockFunction": [Function],
+                                  }
+            }
+            location="colorado"
+            stats={
+                        Object {
+                                    "2004": 0.24,
+                                    "2005": 0.63,
+                                    "2006": 0.11,
+                                  }
+            }
+/>,
+          <Card
+            findAverages={
+                        Object {
+                                    "mockFunction": [Function],
+                                  }
+            }
+            location="academy 20"
+            stats={
+                        Object {
+                                    "2012": 0.24,
+                                    "2013": 0.63,
+                                    "2014": 0.11,
+                                  }
+            }
+/>,
+          <Card
+            comparedAverage={0.46}
+            findAverages={undefined}
+            locationOne="COLORADO"
+            locationOneAverage={0.53}
+            locationTwo="ACADEMY 20"
+            locationTwoAverage={0.4}
+/>,
+        ],
+        "className": "compare-cards-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "findAverages": Object {
+              "mockFunction": [Function],
+            },
+            "location": "colorado",
+            "stats": Object {
+              "2004": 0.24,
+              "2005": 0.63,
+              "2006": 0.11,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "findAverages": Object {
+              "mockFunction": [Function],
+            },
+            "location": "academy 20",
+            "stats": Object {
+              "2012": 0.24,
+              "2013": 0.63,
+              "2014": 0.11,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "comparedAverage": 0.46,
+            "findAverages": undefined,
+            "locationOne": "COLORADO",
+            "locationOneAverage": 0.53,
+            "locationTwo": "ACADEMY 20",
+            "locationTwoAverage": 0.4,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

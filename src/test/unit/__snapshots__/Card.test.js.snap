@@ -1,0 +1,457 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches the snapshot 1`] = `undefined`;
+
+exports[`Card should return a stats card when passed an object with averages 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    comparedAverage={0.46}
+    locationOne="COLORADO"
+    locationOneAverage={0.53}
+    locationTwo="ACADEMY 20"
+    locationTwoAverage={0.4}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          COLORADO
+</h1>,
+        <h1>
+          0.53
+</h1>,
+        <p>
+          0.46
+</p>,
+        <h1>
+          ACADEMY 20
+</h1>,
+        <h1>
+          0.4
+</h1>,
+      ],
+      "className": "compare-card card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "COLORADO",
+        },
+        "ref": null,
+        "rendered": "COLORADO",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 0.53,
+        },
+        "ref": null,
+        "rendered": 0.53,
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 0.46,
+        },
+        "ref": null,
+        "rendered": 0.46,
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "ACADEMY 20",
+        },
+        "ref": null,
+        "rendered": "ACADEMY 20",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": 0.4,
+        },
+        "ref": null,
+        "rendered": 0.4,
+        "type": "h1",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            COLORADO
+</h1>,
+          <h1>
+            0.53
+</h1>,
+          <p>
+            0.46
+</p>,
+          <h1>
+            ACADEMY 20
+</h1>,
+          <h1>
+            0.4
+</h1>,
+        ],
+        "className": "compare-card card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "COLORADO",
+          },
+          "ref": null,
+          "rendered": "COLORADO",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 0.53,
+          },
+          "ref": null,
+          "rendered": 0.53,
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 0.46,
+          },
+          "ref": null,
+          "rendered": 0.46,
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ACADEMY 20",
+          },
+          "ref": null,
+          "rendered": "ACADEMY 20",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": 0.4,
+          },
+          "ref": null,
+          "rendered": 0.4,
+          "type": "h1",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Card should return a stats card when passed an object with property of stats 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    findAverages={[Function]}
+    location="colorado"
+    stats={
+        Object {
+            "2004": 0.24,
+            "2005": 0.63,
+            "2006": 0.11,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1>
+          colorado
+</h1>,
+        <ul>
+          <li
+                    className="lessThan"
+          >
+                    0.24
+          </li>
+          <li
+                    className="greater"
+          >
+                    0.63
+          </li>
+          <li
+                    className="lessThan"
+          >
+                    0.11
+          </li>
+</ul>,
+      ],
+      "className": "card",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "colorado",
+        },
+        "ref": null,
+        "rendered": "colorado",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="lessThan"
+>
+              0.24
+</li>,
+            <li
+              className="greater"
+>
+              0.63
+</li>,
+            <li
+              className="lessThan"
+>
+              0.11
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": 0.24,
+              "className": "lessThan",
+            },
+            "ref": null,
+            "rendered": 0.24,
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": 0.63,
+              "className": "greater",
+            },
+            "ref": null,
+            "rendered": 0.63,
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": 0.11,
+              "className": "lessThan",
+            },
+            "ref": null,
+            "rendered": 0.11,
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            colorado
+</h1>,
+          <ul>
+            <li
+                        className="lessThan"
+            >
+                        0.24
+            </li>
+            <li
+                        className="greater"
+            >
+                        0.63
+            </li>
+            <li
+                        className="lessThan"
+            >
+                        0.11
+            </li>
+</ul>,
+        ],
+        "className": "card",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "colorado",
+          },
+          "ref": null,
+          "rendered": "colorado",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="lessThan"
+>
+                0.24
+</li>,
+              <li
+                className="greater"
+>
+                0.63
+</li>,
+              <li
+                className="lessThan"
+>
+                0.11
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": 0.24,
+                "className": "lessThan",
+              },
+              "ref": null,
+              "rendered": 0.24,
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": 0.63,
+                "className": "greater",
+              },
+              "ref": null,
+              "rendered": 0.63,
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": 0.11,
+                "className": "lessThan",
+              },
+              "ref": null,
+              "rendered": 0.11,
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

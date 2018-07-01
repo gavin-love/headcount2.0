@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import  '../styles/CardContainer.css'
 
 const CardContainer = ({districts, findAverages}) => {
+  console.log(districts)
   const allDistricts = districts.map((district, index) => {
     return <Card location={district.Location} stats={district.stats} key={index} findAverages={findAverages} />
   })
