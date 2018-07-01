@@ -8,7 +8,6 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
     const allSelectedDistricts = selectedDistricts.map(
       (selectedDistrict, index) => {
         if (selectedDistrict.locationOne) {
-          console.log(selectedDistrict);
           return (
             <Card
               locationOne={selectedDistrict.locationOne}
@@ -17,12 +16,14 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
               locationTwo={selectedDistrict.locationTwo}
               locationTwoAverage={selectedDistrict.locationTwoAverage}
               key={index}
+              findAverages={selectedDistrict.findAverages}
             />
           );
         }
 
         return (
           <Card
+            findAverages={selectedDistrict.findAverages}
             location={selectedDistrict.location}
             stats={selectedDistrict.stats}
             key={index}

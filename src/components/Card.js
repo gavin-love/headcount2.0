@@ -29,9 +29,10 @@ const Card = props => {
       </div>
     );
   } else if (!props.stats) {
-    console.log(props);
     return (
-      <div className="compare-card card">
+      <div 
+      onClick={() => props.findAverages(props)}
+        className="compare-card card">
         <h1>{props.locationOne}</h1>
         <h1>{props.locationOneAverage}</h1>
         <p>{props.comparedAverage}</p>
