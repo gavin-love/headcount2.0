@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Card.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Card = props => {
   if (props.stats) {
@@ -12,7 +12,6 @@ const Card = props => {
             {stat}
           </li>
         );
-
       } else {
         return (
           <li className="lessThan" key={index}>
@@ -29,10 +28,12 @@ const Card = props => {
       </div>
     );
   } else if (!props.stats) {
+    console.log(props);
     return (
-      <div 
-      onClick={() => props.findAverages(props)}
-        className="compare-card card">
+      <div
+        onClick={() => props.findAverages(props)}
+        className="compare-card card"
+      >
         <h1>{props.locationOne}</h1>
         <h1>{props.locationOneAverage}</h1>
         <p>{props.comparedAverage}</p>
@@ -50,7 +51,7 @@ Card.propTypes = {
   locationOneAverage: PropTypes.number,
   locationTwoAverage: PropTypes.number,
   comparedAverage: PropTypes.number,
-  locationTwo: PropTypes.string,
+  locationTwo: PropTypes.string
 };
 
 export default Card;
