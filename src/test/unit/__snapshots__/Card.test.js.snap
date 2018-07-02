@@ -32,9 +32,11 @@ ShallowWrapper {
         <h1>
           0.53
 </h1>,
-        <p>
+        <h1
+          className="comp-average"
+>
           0.46
-</p>,
+</h1>,
         <h1>
           ACADEMY 20
 </h1>,
@@ -42,7 +44,7 @@ ShallowWrapper {
           0.4
 </h1>,
       ],
-      "className": "compare-card card",
+      "className": "card compareCard",
       "onClick": [Function],
     },
     "ref": null,
@@ -75,10 +77,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": 0.46,
+          "className": "comp-average",
         },
         "ref": null,
         "rendered": 0.46,
-        "type": "p",
+        "type": "h1",
       },
       Object {
         "instance": null,
@@ -118,9 +121,11 @@ ShallowWrapper {
           <h1>
             0.53
 </h1>,
-          <p>
+          <h1
+            className="comp-average"
+>
             0.46
-</p>,
+</h1>,
           <h1>
             ACADEMY 20
 </h1>,
@@ -128,7 +133,7 @@ ShallowWrapper {
             0.4
 </h1>,
         ],
-        "className": "compare-card card",
+        "className": "card compareCard",
         "onClick": [Function],
       },
       "ref": null,
@@ -161,10 +166,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": 0.46,
+            "className": "comp-average",
           },
           "ref": null,
           "rendered": 0.46,
-          "type": "p",
+          "type": "h1",
         },
         Object {
           "instance": null,
@@ -233,25 +239,50 @@ ShallowWrapper {
         <h1>
           colorado
 </h1>,
-        <ul>
-          <li
-                    className="lessThan"
+        <div
+          className="lists"
+>
+          <ul
+                    className="year"
           >
-                    0.24
-          </li>
-          <li
-                    className="greater"
+                    <li
+                              className="greater"
+                    >
+                              2004
+                    </li>
+                    <li
+                              className="greater"
+                    >
+                              2005
+                    </li>
+                    <li
+                              className="greater"
+                    >
+                              2006
+                    </li>
+          </ul>
+          <ul
+                    className="value"
           >
-                    0.63
-          </li>
-          <li
-                    className="lessThan"
-          >
-                    0.11
-          </li>
-</ul>,
+                    <li
+                              className="lessThan"
+                    >
+                              0.24
+                    </li>
+                    <li
+                              className="greater"
+                    >
+                              0.63
+                    </li>
+                    <li
+                              className="lessThan"
+                    >
+                              0.11
+                    </li>
+          </ul>
+</div>,
       ],
-      "className": "card",
+      "className": "card ",
       "onClick": [Function],
     },
     "ref": null,
@@ -273,63 +304,181 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <li
-              className="lessThan"
+            <ul
+              className="year"
 >
-              0.24
-</li>,
-            <li
-              className="greater"
+              <li
+                            className="greater"
+              >
+                            2004
+              </li>
+              <li
+                            className="greater"
+              >
+                            2005
+              </li>
+              <li
+                            className="greater"
+              >
+                            2006
+              </li>
+</ul>,
+            <ul
+              className="value"
 >
-              0.63
-</li>,
-            <li
-              className="lessThan"
->
-              0.11
-</li>,
+              <li
+                            className="lessThan"
+              >
+                            0.24
+              </li>
+              <li
+                            className="greater"
+              >
+                            0.63
+              </li>
+              <li
+                            className="lessThan"
+              >
+                            0.11
+              </li>
+</ul>,
           ],
+          "className": "lists",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "0",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 0.24,
-              "className": "lessThan",
+              "children": Array [
+                <li
+                  className="greater"
+>
+                  2004
+</li>,
+                <li
+                  className="greater"
+>
+                  2005
+</li>,
+                <li
+                  className="greater"
+>
+                  2006
+</li>,
+              ],
+              "className": "year",
             },
             "ref": null,
-            "rendered": 0.24,
-            "type": "li",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2004",
+                  "className": "greater",
+                },
+                "ref": null,
+                "rendered": "2004",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2005",
+                  "className": "greater",
+                },
+                "ref": null,
+                "rendered": "2005",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": "2006",
+                  "className": "greater",
+                },
+                "ref": null,
+                "rendered": "2006",
+                "type": "li",
+              },
+            ],
+            "type": "ul",
           },
           Object {
             "instance": null,
-            "key": "1",
+            "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 0.63,
-              "className": "greater",
+              "children": Array [
+                <li
+                  className="lessThan"
+>
+                  0.24
+</li>,
+                <li
+                  className="greater"
+>
+                  0.63
+</li>,
+                <li
+                  className="lessThan"
+>
+                  0.11
+</li>,
+              ],
+              "className": "value",
             },
             "ref": null,
-            "rendered": 0.63,
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": "2",
-            "nodeType": "host",
-            "props": Object {
-              "children": 0.11,
-              "className": "lessThan",
-            },
-            "ref": null,
-            "rendered": 0.11,
-            "type": "li",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.24,
+                  "className": "lessThan",
+                },
+                "ref": null,
+                "rendered": 0.24,
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.63,
+                  "className": "greater",
+                },
+                "ref": null,
+                "rendered": 0.63,
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.11,
+                  "className": "lessThan",
+                },
+                "ref": null,
+                "rendered": 0.11,
+                "type": "li",
+              },
+            ],
+            "type": "ul",
           },
         ],
-        "type": "ul",
+        "type": "div",
       },
     ],
     "type": "div",
@@ -344,25 +493,50 @@ ShallowWrapper {
           <h1>
             colorado
 </h1>,
-          <ul>
-            <li
-                        className="lessThan"
+          <div
+            className="lists"
+>
+            <ul
+                        className="year"
             >
-                        0.24
-            </li>
-            <li
-                        className="greater"
+                        <li
+                                    className="greater"
+                        >
+                                    2004
+                        </li>
+                        <li
+                                    className="greater"
+                        >
+                                    2005
+                        </li>
+                        <li
+                                    className="greater"
+                        >
+                                    2006
+                        </li>
+            </ul>
+            <ul
+                        className="value"
             >
-                        0.63
-            </li>
-            <li
-                        className="lessThan"
-            >
-                        0.11
-            </li>
-</ul>,
+                        <li
+                                    className="lessThan"
+                        >
+                                    0.24
+                        </li>
+                        <li
+                                    className="greater"
+                        >
+                                    0.63
+                        </li>
+                        <li
+                                    className="lessThan"
+                        >
+                                    0.11
+                        </li>
+            </ul>
+</div>,
         ],
-        "className": "card",
+        "className": "card ",
         "onClick": [Function],
       },
       "ref": null,
@@ -384,63 +558,181 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <li
-                className="lessThan"
+              <ul
+                className="year"
 >
-                0.24
-</li>,
-              <li
-                className="greater"
+                <li
+                                className="greater"
+                >
+                                2004
+                </li>
+                <li
+                                className="greater"
+                >
+                                2005
+                </li>
+                <li
+                                className="greater"
+                >
+                                2006
+                </li>
+</ul>,
+              <ul
+                className="value"
 >
-                0.63
-</li>,
-              <li
-                className="lessThan"
->
-                0.11
-</li>,
+                <li
+                                className="lessThan"
+                >
+                                0.24
+                </li>
+                <li
+                                className="greater"
+                >
+                                0.63
+                </li>
+                <li
+                                className="lessThan"
+                >
+                                0.11
+                </li>
+</ul>,
             ],
+            "className": "lists",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "0",
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 0.24,
-                "className": "lessThan",
+                "children": Array [
+                  <li
+                    className="greater"
+>
+                    2004
+</li>,
+                  <li
+                    className="greater"
+>
+                    2005
+</li>,
+                  <li
+                    className="greater"
+>
+                    2006
+</li>,
+                ],
+                "className": "year",
               },
               "ref": null,
-              "rendered": 0.24,
-              "type": "li",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2004",
+                    "className": "greater",
+                  },
+                  "ref": null,
+                  "rendered": "2004",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2005",
+                    "className": "greater",
+                  },
+                  "ref": null,
+                  "rendered": "2005",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "2006",
+                    "className": "greater",
+                  },
+                  "ref": null,
+                  "rendered": "2006",
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
             },
             Object {
               "instance": null,
-              "key": "1",
+              "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 0.63,
-                "className": "greater",
+                "children": Array [
+                  <li
+                    className="lessThan"
+>
+                    0.24
+</li>,
+                  <li
+                    className="greater"
+>
+                    0.63
+</li>,
+                  <li
+                    className="lessThan"
+>
+                    0.11
+</li>,
+                ],
+                "className": "value",
               },
               "ref": null,
-              "rendered": 0.63,
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": "2",
-              "nodeType": "host",
-              "props": Object {
-                "children": 0.11,
-                "className": "lessThan",
-              },
-              "ref": null,
-              "rendered": 0.11,
-              "type": "li",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.24,
+                    "className": "lessThan",
+                  },
+                  "ref": null,
+                  "rendered": 0.24,
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.63,
+                    "className": "greater",
+                  },
+                  "ref": null,
+                  "rendered": 0.63,
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.11,
+                    "className": "lessThan",
+                  },
+                  "ref": null,
+                  "rendered": 0.11,
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
             },
           ],
-          "type": "ul",
+          "type": "div",
         },
       ],
       "type": "div",

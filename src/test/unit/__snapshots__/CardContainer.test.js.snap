@@ -1,193 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card matches the snapshot 1`] = `undefined`;
-
-exports[`Card should 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CardContainer
-    districts={
-        Array [
-            Object {
-              "Location": "colorado",
-              "stats": Object {
-                "2004": 0.24,
-                "2005": 0.63,
-                "2006": 0.11,
-              },
-            },
-            Object {
-              "Location": "academy 20",
-              "stats": Object {
-                "2012": 0.24,
-                "2013": 0.63,
-                "2014": 0.11,
-              },
-            },
-          ]
-    }
-    findAverages={[Function]}
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <Card
-          findAverages={[Function]}
-          location="colorado"
-          stats={
-                    Object {
-                              "2004": 0.24,
-                              "2005": 0.63,
-                              "2006": 0.11,
-                            }
-          }
-/>,
-        <Card
-          findAverages={[Function]}
-          location="academy 20"
-          stats={
-                    Object {
-                              "2012": 0.24,
-                              "2013": 0.63,
-                              "2014": 0.11,
-                            }
-          }
-/>,
-      ],
-      "className": "card-container",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": "0",
-        "nodeType": "function",
-        "props": Object {
-          "findAverages": [Function],
-          "location": "colorado",
-          "stats": Object {
-            "2004": 0.24,
-            "2005": 0.63,
-            "2006": 0.11,
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "function",
-        "props": Object {
-          "findAverages": [Function],
-          "location": "academy 20",
-          "stats": Object {
-            "2012": 0.24,
-            "2013": 0.63,
-            "2014": 0.11,
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <Card
-            findAverages={[Function]}
-            location="colorado"
-            stats={
-                        Object {
-                                    "2004": 0.24,
-                                    "2005": 0.63,
-                                    "2006": 0.11,
-                                  }
-            }
-/>,
-          <Card
-            findAverages={[Function]}
-            location="academy 20"
-            stats={
-                        Object {
-                                    "2012": 0.24,
-                                    "2013": 0.63,
-                                    "2014": 0.11,
-                                  }
-            }
-/>,
-        ],
-        "className": "card-container",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": "0",
-          "nodeType": "function",
-          "props": Object {
-            "findAverages": [Function],
-            "location": "colorado",
-            "stats": Object {
-              "2004": 0.24,
-              "2005": 0.63,
-              "2006": 0.11,
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "function",
-          "props": Object {
-            "findAverages": [Function],
-            "location": "academy 20",
-            "stats": Object {
-              "2012": 0.24,
-              "2013": 0.63,
-              "2014": 0.11,
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
-`;
-
 exports[`CardContainer matches the snapshot 1`] = `undefined`;
 
 exports[`CardContainer should 1`] = `
@@ -233,6 +45,7 @@ ShallowWrapper {
         <Card
           findAverages={[Function]}
           location="colorado"
+          selected={undefined}
           stats={
                     Object {
                               "2004": 0.24,
@@ -244,6 +57,7 @@ ShallowWrapper {
         <Card
           findAverages={[Function]}
           location="academy 20"
+          selected={undefined}
           stats={
                     Object {
                               "2012": 0.24,
@@ -264,6 +78,7 @@ ShallowWrapper {
         "props": Object {
           "findAverages": [Function],
           "location": "colorado",
+          "selected": undefined,
           "stats": Object {
             "2004": 0.24,
             "2005": 0.63,
@@ -281,6 +96,7 @@ ShallowWrapper {
         "props": Object {
           "findAverages": [Function],
           "location": "academy 20",
+          "selected": undefined,
           "stats": Object {
             "2012": 0.24,
             "2013": 0.63,
@@ -304,6 +120,7 @@ ShallowWrapper {
           <Card
             findAverages={[Function]}
             location="colorado"
+            selected={undefined}
             stats={
                         Object {
                                     "2004": 0.24,
@@ -315,6 +132,7 @@ ShallowWrapper {
           <Card
             findAverages={[Function]}
             location="academy 20"
+            selected={undefined}
             stats={
                         Object {
                                     "2012": 0.24,
@@ -335,6 +153,7 @@ ShallowWrapper {
           "props": Object {
             "findAverages": [Function],
             "location": "colorado",
+            "selected": undefined,
             "stats": Object {
               "2004": 0.24,
               "2005": 0.63,
@@ -352,6 +171,7 @@ ShallowWrapper {
           "props": Object {
             "findAverages": [Function],
             "location": "academy 20",
+            "selected": undefined,
             "stats": Object {
               "2012": 0.24,
               "2013": 0.63,
