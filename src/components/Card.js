@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Card.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Card = props => {
   if (props.stats) {
@@ -13,7 +13,6 @@ const Card = props => {
             {stat}
           </li>
         );
-
       } else {
         return (
           <li className="lessThan" key={index}>
@@ -30,9 +29,11 @@ const Card = props => {
       );
     });
 
-
     return (
-      <div onClick={() => props.findAverages(props)} className={"card " + (props.selected === true ? "selected": "")}>
+      <div
+        onClick={() => props.findAverages(props)}
+        className={"card " + (props.selected === true ? "selected" : "")}
+      >
         <h1>{props.location}</h1>
         <div className="lists">
           <ul className="year">{districtYear}</ul>
@@ -42,9 +43,10 @@ const Card = props => {
     );
   } else if (!props.stats) {
     return (
-      <div 
+      <div
         onClick={() => props.findAverages(props)}
-        className={"card compareCard" + (props.selected ? "selected": "")}>
+        className={"card compareCard" + (props.selected ? "selected" : "")}
+      >
         <h1>{props.locationOne}</h1>
         <h1>{props.locationOneAverage}</h1>
         <h1 className="comp-average">{props.comparedAverage}</h1>
@@ -56,6 +58,8 @@ const Card = props => {
 };
 
 Card.propTypes = {
+  selected: PropTypes.bool,
+  findAverages: PropTypes.func,
   stats: PropTypes.object,
   location: PropTypes.string,
   locationOne: PropTypes.string,

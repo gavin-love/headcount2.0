@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "./Card";
-import PropTypes from 'prop-types';
-import '../styles/CompareCardContainer.css'
+import PropTypes from "prop-types";
+import "../styles/CompareCardContainer.css";
 
 const CompareCardsContainer = ({ selectedDistricts }) => {
   if (selectedDistricts) {
     const allSelectedDistricts = selectedDistricts.map(
-      (selectedDistrict, index) => {        
+      (selectedDistrict, index) => {
         if (selectedDistrict.locationOne) {
           return (
             <Card
@@ -16,7 +16,7 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
               locationTwo={selectedDistrict.locationTwo}
               locationTwoAverage={selectedDistrict.locationTwoAverage}
               key={index}
-              findAverages={selectedDistrict.findAverages}          
+              findAverages={selectedDistrict.findAverages}
             />
           );
         }
@@ -28,13 +28,14 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
             stats={selectedDistrict.stats}
             key={index}
             selected={selectedDistrict.selected}
-            
           />
         );
       }
     );
 
-    return <div className="compare-cards-container">{allSelectedDistricts}</div>;
+    return (
+      <div className="compare-cards-container">{allSelectedDistricts}</div>
+    );
   } else {
     return <div />;
   }
