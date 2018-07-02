@@ -22,7 +22,7 @@ class App extends Component {
     const eachDistrict = districtKeys.map(key => {
       return district.stats[key];
     });
-  
+
     this.setState({
       districts: eachDistrict
     });
@@ -40,19 +40,36 @@ class App extends Component {
     });
   };
 
-  // setDistrictsSelectedClass = () => {
-  //   if(this.state.selectedDistricts) {
-  //     const result = this.state.districts.map(district => {
-  //       if(this.state.selectedDistricts.includes(district.location)) {
-  //         return {...district, selected: true}
-  //       }
-  //     })
-  //     this.setState({...this.state.districts, result})
-  //   }
-  // }
+  getDistrictClasses = (location) => {
+    const amt_selected = this.state.districts.reduce((sum, district) => {
+        if (district.selected) {
+            sum += 1
+        }
+        return sum
+    }, 0)
+    if (amt_selected == 2) {
+        var result = this.state.districts.map(district => {
+            if(district.Location === location.location) {
+              return {...district, selected: true}
+            } else {
+              return {...district, selected: false}
+            }
+        })
+    } else {
+        var result = this.state.districts.map(district => {
+            if(district.Location === location.location || district.selected) {
+              return {...district, selected: true}
+            } else {
+              return {...district, selected: false}
+            }
+        })
+    }
+
+    return result
+  }
 
   findAverages = location => {
-    // this.setDistrictsSelectedClass();
+    const districts = this.getDistrictClasses(location)
     if(this.state.selectedDistricts.length < 2) {
       const locationStats = Object.values(location.stats);
       let xyz;
@@ -60,7 +77,7 @@ class App extends Component {
         average += num;
         return average;
       }, 0);
-  
+
       const result = xyz / locationStats.length
       const average = Math.round(result * 1000) / 1000
 
@@ -73,10 +90,11 @@ class App extends Component {
         ...this.state.selectedDistricts,
         newSelectedDistrict
       ];
-      
-      this.setState({ selectedDistricts }, () => {
+
+      this.setState({districts: districts, selectedDistricts }, () => {
         this.compareAverages(this.state.selectedDistricts);
-      });
+    });
+
     } else {
       let unshiftedDistricts = this.state.selectedDistricts.unshift();
       const locationStats = Object.values(location.stats);
@@ -85,7 +103,7 @@ class App extends Component {
         average += num;
         return average;
       }, 0);
-  
+
       const newSelectedDistrict = {
         ...location,
         average: xyz / locationStats.length,
@@ -95,12 +113,12 @@ class App extends Component {
         ...unshiftedDistricts,
         newSelectedDistrict
       ];
-  
-      this.setState({ selectedDistricts }, () => {
+
+      this.setState({ districts: districts, selectedDistricts}, () => {
         this.compareAverages(this.state.selectedDistricts);
-      });
+    });
     }
-    }
+  }
 
     compareAverages = districts => {
     if (this.state.selectedDistricts.length === 2) {
@@ -131,6 +149,7 @@ class App extends Component {
 
       this.setState({ selectedDistricts });
     }
+
   };
 
   componentDidMount() {
