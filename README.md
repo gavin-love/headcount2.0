@@ -9,3 +9,5 @@ Run npm start to launch the app
 ##Team
 Ryan Harrington
 Gavin Love
+
+<img src="https://github.com/gavin-love/headcount2.0/blob/master/Screen%20Shot%202018-07-02%20at%209.29.56%20AM.png" />
