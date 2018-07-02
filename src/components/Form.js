@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import '../styles/Form.css';
+import PropTypes from 'prop-types';
 
 export default class Form extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ export default class Form extends Component {
   render() {
     return (
       <form>
+        <h1>HEADCOUNT 2.0</h1>
         <input
           type="text"
           placeholder="Enter District"
@@ -23,3 +25,9 @@ export default class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  displaySearchedDistricts: PropTypes.func
+};
+
+

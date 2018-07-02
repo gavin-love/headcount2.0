@@ -40,4 +40,8 @@ const CompareCardsContainer = ({ selectedDistricts }) => {
   }
 };
 
+CompareCardsContainer.propTypes = {
+  selectedDistricts: PropTypes.array.isRequired
+};
+
 export default CompareCardsContainer;

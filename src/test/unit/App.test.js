@@ -18,8 +18,8 @@ describe('App', () => {
   })
 
   it('should match snapshot', () => {
-    expect(wrapper).toMatchSnapshot()
-  })
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it("initial state starts with an array of 181", () => {
   
