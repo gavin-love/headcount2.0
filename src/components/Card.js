@@ -32,7 +32,9 @@ const Card = props => {
 
 
     return (
-      <div onClick={() => props.findAverages(props)} className={"card " + (props.selected === true ? "selected": "")}>
+      <div onClick={() => 
+        props.findAverages(props)} 
+      className={"card " + (props.selected === true ? "selected": "")}>
         <h1>{props.location}</h1>
         <div className="lists">
           <ul className="year">{districtYear}</ul>
