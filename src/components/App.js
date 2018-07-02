@@ -151,6 +151,12 @@ class App extends Component {
   }
 
   render() {
+    const {
+      selectedDistricts,
+      searchedDistricts,
+      districts
+    } = this.state;
+    
     if (this.state.searchedDistricts.length) {
       return (
         <div>
@@ -159,11 +165,11 @@ class App extends Component {
             displaySearchedDistricts={this.displaySearchedDistricts}
           />
           <CompareCardsContainer
-            selectedDistricts={this.state.selectedDistricts}
+            selectedDistricts={selectedDistricts}
             findAverages={this.findAverages}
           />
           <CardContainer
-            districts={this.state.searchedDistricts}
+            districts={searchedDistricts}
             findAverages={this.findAverages}
           />
         </div>
@@ -177,12 +183,12 @@ class App extends Component {
           displaySearchedDistricts={this.displaySearchedDistricts}
         />
         <CompareCardsContainer
-          selectedDistricts={this.state.selectedDistricts}
+          selectedDistricts={selectedDistricts}
         />
         <CardContainer
-          districts={this.state.districts}
+          districts={districts}
           findAverages={this.findAverages}
-          selectedDistricts={this.state.selectedDistricts}
+          selectedDistricts={selectedDistricts}
         />
       </div>
     );
