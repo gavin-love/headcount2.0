@@ -22,7 +22,7 @@ class App extends Component {
     const eachDistrict = districtKeys.map(key => {
       return district.stats[key];
     });
-
+  
     this.setState({
       districts: eachDistrict
     });
@@ -40,7 +40,19 @@ class App extends Component {
     });
   };
 
+  // setDistrictsSelectedClass = () => {
+  //   if(this.state.selectedDistricts) {
+  //     const result = this.state.districts.map(district => {
+  //       if(this.state.selectedDistricts.includes(district.location)) {
+  //         return {...district, selected: true}
+  //       }
+  //     })
+  //     this.setState({...this.state.districts, result})
+  //   }
+  // }
+
   findAverages = location => {
+    // this.setDistrictsSelectedClass();
     if(this.state.selectedDistricts.length < 2) {
       const locationStats = Object.values(location.stats);
       let xyz;
