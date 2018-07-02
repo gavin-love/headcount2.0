@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Card from "../../components/Card.js";
 import { shallow } from "enzyme";
 
@@ -26,8 +25,15 @@ describe("Card", () => {
   });
 
   it("should return a stats card when passed an object with averages", () => {
-
-    wrapper = shallow(<Card locationOne='COLORADO' locationOneAverage={0.53} comparedAverage={0.46} locationTwo='ACADEMY 20' locationTwoAverage={0.40} />);
+    wrapper = shallow(
+      <Card
+        locationOne="COLORADO"
+        locationOneAverage={0.53}
+        comparedAverage={0.46}
+        locationTwo="ACADEMY 20"
+        locationTwoAverage={0.4}
+      />
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
