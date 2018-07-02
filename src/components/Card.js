@@ -3,9 +3,21 @@ import "../styles/Card.css";
 import PropTypes from "prop-types";
 
 const Card = props => {
-  if (props.stats) {
-    const districtValues = Object.values(props.stats);
-    const districtYears = Object.keys(props.stats);
+  const { 
+    stats, 
+    findAverages, 
+    selected, 
+    location, 
+    locationOne, 
+    locationOneAverage, 
+    comparedAverage, 
+    locationTwo, 
+    locationTwoAverage 
+  } = props;
+
+  if (stats) {
+    const districtValues = Object.values(stats);
+    const districtYears = Object.keys(stats);
     const districtStat = districtValues.map((stat, index) => {
       if (stat >= 0.5) {
         return (
@@ -30,36 +42,35 @@ const Card = props => {
     });
 
     return (
-      <div
-        onClick={() => props.findAverages(props)}
-        className={"card " + (props.selected === true ? "selected" : "")}
-      >
-        <h1>{props.location}</h1>
+      <div onClick={() => 
+        findAverages(props)} 
+      className={"card " + (selected === true ? "selected": "")}>
+        <h1>{location}</h1>
         <div className="lists">
           <ul className="year">{districtYear}</ul>
           <ul className="value">{districtStat}</ul>
         </div>
       </div>
     );
-  } else if (!props.stats) {
+  } else if (!stats) {
     return (
-      <div
-        onClick={() => props.findAverages(props)}
-        className={"card compareCard" + (props.selected ? "selected" : "")}
-      >
-        <h1>{props.locationOne}</h1>
-        <h1>{props.locationOneAverage}</h1>
-        <h1 className="comp-average">{props.comparedAverage}</h1>
-        <h1>{props.locationTwo}</h1>
-        <h1>{props.locationTwoAverage}</h1>
+      <div 
+        onClick={() => findAverages(props)}
+        className={"card compareCard" + (selected ? "selected": "")}>
+        <h1>{locationOne}</h1>
+        <h1>{locationOneAverage}</h1>
+        <h1 className="comp-average">{comparedAverage}</h1>
+        <h1>{locationTwo}</h1>
+        <h1>{locationTwoAverage}</h1>
       </div>
     );
   }
 };
 
 Card.propTypes = {
-  selected: PropTypes.bool,
+
   findAverages: PropTypes.func,
+  selected: PropTypes.bool,
   stats: PropTypes.object,
   location: PropTypes.string,
   locationOne: PropTypes.string,
