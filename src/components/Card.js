@@ -43,6 +43,7 @@ const Card = props => {
 
     return (
       <div onClick={() => 
+
         findAverages(props)} 
       className={"card " + (selected === true ? "selected": "")}>
         <h1>{location}</h1>

@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
-import PropTypes from "prop-types";
-import "../styles/CompareCardContainer.css";
+import PropTypes from 'prop-types';
+import '../styles/CompareCardContainer.css';
 
 const CompareCardsContainer = ({ selectedDistricts }) => {
   
