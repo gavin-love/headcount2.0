@@ -2927,6 +2927,7 @@ ShallowWrapper {
                             ]
           }
           findAverages={[Function]}
+          selectedDistricts={Array []}
 />,
       ],
     },
@@ -5859,6 +5860,7 @@ ShallowWrapper {
             },
           ],
           "findAverages": [Function],
+          "selectedDistricts": Array [],
         },
         "ref": null,
         "rendered": null,
@@ -8783,6 +8785,7 @@ ShallowWrapper {
                                   ]
             }
             findAverages={[Function]}
+            selectedDistricts={Array []}
 />,
         ],
       },
@@ -11715,6 +11718,7 @@ ShallowWrapper {
               },
             ],
             "findAverages": [Function],
+            "selectedDistricts": Array [],
           },
           "ref": null,
           "rendered": null,
