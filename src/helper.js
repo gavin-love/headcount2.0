@@ -20,7 +20,7 @@ export default class DistrictRepository {
         allDistricts[upperCaseDistrict] = {
           Location: upperCaseDistrict,
           stats: { [year]: roundedPercentage }
-        }
+        };
 
       } else {
         allDistricts[upperCaseDistrict].stats = {
@@ -46,27 +46,22 @@ export default class DistrictRepository {
     if (location) {
       const upperCaseLocation = location.toUpperCase();
       return locationKeys.reduce((matches, district) => {
-        if(this.stats[district].Location.includes(upperCaseLocation)) {
-          matches = [...matches, this.stats[district]]
+        if (this.stats[district].Location.includes(upperCaseLocation)) {
+          matches = [...matches, this.stats[district]];
         }
         
         return matches;
-      }, [])
-      } else {
-        const defaultStats = [];
-        locationKeys.forEach(location => {
-          defaultStats.push(this.stats[location])
-        })
+      }, []);
+    } else {
+      const defaultStats = [];
+      locationKeys.forEach(location => {
+        defaultStats.push(this.stats[location]);
+      });
 
-        return defaultStats;
+      return defaultStats;
     }
   }
-
-  findAverage = (location) => {
-    
-  }
   
-
   render() {
     return <h1>hello</h1>;
   }
